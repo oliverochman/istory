@@ -1,14 +1,10 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Istory</title>
-    <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
+  <ul>
+    <li><a href="login.asp">Login</a></li>
+    <li><a href="signup.asp">Sign up</a></li>
+  </ul>
+  <h1>
     <%= yield %>
-  </body>
+  </h1>
 </html>
