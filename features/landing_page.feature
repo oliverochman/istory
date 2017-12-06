@@ -12,4 +12,3 @@ Feature: iStory landing page
     And I should see "Tale" element
     And I should see "Contact"
     And I should see "About"
-    Then show me the page

@@ -4,16 +4,23 @@
     <title>Istory</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-<body>
-  <ul>
-    <li><%= link_to "Login", '#' %></li>
-    <li><%= link_to "Sign up", '#' %></li>
-  </ul>
-  <h1>
-    <%= yield %>
-  </h1>
-</body>
-</html>
+  <body>
+    <section id="navbar">
+      <ul>
+        <li><%= link_to "Login", '#' %></li>
+        <li><%= link_to "Sign up", '#' %></li>
+      </ul>
+    </section>
+    <section id="content">
+      <% if notice %>
+        <p><%= notice %></p>
+        <% elsif alert %>
+          <p><%= alert %></p>
+        <% end %>
+        <%= yield %>
+      </section>
+    </body>
+  </html>
