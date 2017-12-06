@@ -12,8 +12,9 @@ RSpec.describe Chapter, type: :model do
   end
 
   describe 'factory' do
+    let(:story) { FactoryBot.create(:story)}
     it 'should be valid' do
-      expect(FactoryBot.create(:chapter)).to be_valid
+      expect(FactoryBot.create(:chapter, story: story)).to be_valid
     end
   end
 end
