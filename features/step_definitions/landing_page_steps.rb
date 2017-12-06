@@ -6,6 +6,12 @@ Then("I should see {string}") do |content|
   expect(page).to have_content content
 end
 
+Then("I should see notice {string}") do |text|
+  within "#content" do
+    expect(page).to have_content text
+  end
+end
+
 Then("I should see {string} element") do |text|
   expect(page).to have_content text
 end
