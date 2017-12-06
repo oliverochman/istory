@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <ul>
-    <li><a href="login.asp">Login</a></li>
-    <li><a href="signup.asp">Sign up</a></li>
+    <li><%= link_to "Login", :class => 'navbar-link' %></li>
+    <li><%= link_to "Sign up", :class => 'navbar-link' %></li>
   </ul>
   <h1>
     <%= yield %>
