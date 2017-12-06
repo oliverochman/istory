@@ -12,24 +12,36 @@ Feature: Login
   Scenario: A user provides valid credentials and can log in
     Given I am on the landing page
     When I click "Login" button
-    And show me the page
     Then I am on the login page
     And I enter "Email" as "jenny@ranom.com"
     And I enter "Password" as "password"
     And I click "Log in"
     Then I should be on the landing page
-    And show me the page
 
   Scenario: User leaves email field empty on login
     Given I am on the login page
     When I enter "Email" as ""
     And I enter "Password" as "password"
     And I click "Log in"
-    Then I should see notice "Email can't be blank"
+    Then I should see "Invalid Email or password."
 
   Scenario: User leaves password field empty on login
     Given I am on the login page
     When I enter "Email" as "daniel@random.com"
     And I enter "Password" as ""
     And I click "Log in"
-    Then I should see notice "Password can't be blank"
+    Then I should see "Invalid Email or password."
+
+  Scenario: User leaves wrong password on login
+    Given I am on the login page
+    When I enter "Email" as "daniel@random.com"
+    And I enter "Password" as "notpassword"
+    And I click "Log in"
+    Then I should see "Invalid Email or password."
+
+  Scenario: User leaves wrong email on login
+    Given I am on the login page
+    When I enter "Email" as "wrongemail@random.com"
+    And I enter "Password" as "notpassword"
+    And I click "Log in"
+    Then I should see "Invalid Email or password."
