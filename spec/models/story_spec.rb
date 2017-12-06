@@ -19,4 +19,8 @@ RSpec.describe Story, type: :model do
       expect(FactoryBot.create(:story)).to be_valid
     end
   end
+
+  describe 'associations' do
+     it { is_expected.to have_many :chapters}
+  end
 end

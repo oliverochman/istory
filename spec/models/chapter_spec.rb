@@ -17,4 +17,8 @@ RSpec.describe Chapter, type: :model do
       expect(FactoryBot.create(:chapter, story: story)).to be_valid
     end
   end
+
+  describe 'associations' do
+     it { is_expected.to belong_to :story}
+  end
 end
