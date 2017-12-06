@@ -7,7 +7,9 @@ Feature: Story
     Given the following story exists
     | title    | author          | intro                                                                                    |
     | Starship | Mariza & Alfred | Once upon a time, in a far away galaxy. There was a young team on the Discovery Starship |
-
+    And the following chapters exists
+    | chapter_id | content                                                   |
+    | A          | There is a huge asteroid coming your way, what do you do? |
   Scenario: User reads first part of a story
     When I visit the "Starship" story page
     Then I should see "Starship"
@@ -17,5 +19,5 @@ Feature: Story
   Scenario: User starts the story
     When I visit the "Starship" story page
     And I click "Start Story"
-    Then I should on the first chapter page
-    And I should "There is a huge asteroid coming your way, what do you do?"
+    Then I should be on the first chapter page
+    And I should see "There is a huge asteroid coming your way, what do you do?"
