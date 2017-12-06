@@ -2,4 +2,4 @@
 <p> Written by: <%= @story.author %> </p>
 <p> <%= @story.intro %> </p>
 <%= chapter = Chapter.find_by(chapter_id: "A") %>
-<p><%= link_to "Start Story", story_chapter(chapter) %></p>
+<p><%= link_to "Start Story", story_chapter_path(chapter) %></p>
