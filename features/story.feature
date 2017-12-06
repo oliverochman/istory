@@ -6,4 +6,4 @@ Feature: Story
   Scenario: User reads first part of a story
     Given I visit the "Starship" story page
     Then I should see "Starship"
-    And I should see "Once upon a time, there was a starship called Discovery"
+    And I should see "Once upon a time, in a far away galaxy. There was a young team on the Discovery Starship"
