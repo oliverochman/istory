@@ -22,3 +22,9 @@ Then("I should be on the first chapter page") do
   story = Story.find_by(title: "Starship")
   expect(current_path).to eq story_chapter_path(story, chapter)
 end
+
+Then("I should be on the {string} chapter") do |choice|
+  chapter = Chapter.find_by(chapter_id: choice)
+  story = Story.find_by(title: "Starship")
+  expect(current_path).to eq story_chapter_path(story, chapter)
+end
