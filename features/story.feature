@@ -21,3 +21,9 @@ Feature: Story
     And I click "Start Story"
     Then I should be on the first chapter page
     And I should see "There is a huge asteroid coming your way, what do you do?"
+
+  Scenario: User makes first decision
+    When I visit the "Starship" story page
+    And I click "Start Story"
+    And I click "Shoot it with a laser"
+    Then I should be on the "Shoot it with a laser" chapter
