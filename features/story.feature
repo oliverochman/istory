@@ -24,7 +24,7 @@ Feature: Story
   Scenario: User starts the story
     When I visit the "Starship" story page
     And I click "Start Story"
-    Then I should be on the first chapter page
+    Then I should be on the "A" chapter
     And I should see "There is a huge asteroid coming your way, what do you do?"
 
   Scenario: User makes first decision
