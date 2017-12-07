@@ -1,9 +1,6 @@
 <p> <%= @chapter.content %> </p>
-<% if @chapter_a && @chapter_b && @chapter_c %>
+<% if @chapter_a && @chapter_b %>
   <%= link_to @chapter.choice_a, story_chapter_path(@chapter.story, @chapter_a) %>
   <%= link_to @chapter.choice_b, story_chapter_path(@chapter.story, @chapter_b) %>
-  <%= link_to @chapter.choice_c, story_chapter_path(@chapter.story, @chapter_c) %>
-<% elsif @chapter_a && @chapter_b %>
-  <%= link_to @chapter.choice_a, story_chapter_path(@chapter.story, @chapter_a) %>
-  <%= link_to @chapter.choice_b, story_chapter_path(@chapter.story, @chapter_b) %>
+  <%= link_to @chapter.choice_c, story_chapter_path(@chapter.story, @chapter_c) if @chapter_c %>
 <% end %>
