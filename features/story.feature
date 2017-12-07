@@ -28,5 +28,4 @@ Feature: Story
     When I visit the "Starship" story page
     And I click "Start Story"
     And I click "Shoot it with a laser"
-    And show me the page
     Then I should be on the "AA" chapter
