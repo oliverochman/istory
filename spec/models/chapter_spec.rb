@@ -14,6 +14,7 @@ RSpec.describe Chapter, type: :model do
     it { is_expected.to validate_presence_of :chapter_id }
     it { is_expected.to validate_presence_of :choice_a }
     it { is_expected.to validate_presence_of :choice_b }
+    it { is_expected.to allow_value("", nil).for :choice_c }
   end
 
   describe 'factory' do
