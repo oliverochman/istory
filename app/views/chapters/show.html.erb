@@ -1,6 +1,12 @@
 <p> <%= @chapter.content %> </p>
 <% if @chapter_a && @chapter_b %>
+
+<% @child_chapters.each do |child_chapter| %>
+  <%= link_to child_chapter, story_chapter_path(@chapter.story, child_chapterui) %>
+<% end %>
+
   <%= link_to @chapter.choice_a, story_chapter_path(@chapter.story, @chapter_a) %>
   <%= link_to @chapter.choice_b, story_chapter_path(@chapter.story, @chapter_b) %>
   <%= link_to @chapter.choice_c, story_chapter_path(@chapter.story, @chapter_c) if @chapter_c %>
+
 <% end %>

@@ -15,6 +15,8 @@ Feature: Story
     | AAB        | The monster says it wants to kill you, wyd?               | Fight the monster     | Run away            |          |
     | AAA        | The monster explodes, the whole room is now messy, wyd?   | Clean                 | Dont clean          |          |
     | AAC        | The monster runs after you. Go right or left?             | Right                 | left                |          |
+  #  | AACA       | The monster got stuck and you got away, SUCCESS           |                       |                     |          |
+  Scenario: User reads first part of a story
   Scenario: User reads first part of a story
     When I visit the "Starship" story page
     Then I should see "Starship"
