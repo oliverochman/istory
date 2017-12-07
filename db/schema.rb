@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171207084122) do
+ActiveRecord::Schema.define(version: 20171207192140) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20171207084122) do
     t.string "choice_a"
     t.string "choice_b"
     t.string "choice_c"
+    t.string "title"
     t.index ["story_id"], name: "index_chapters_on_story_id"
   end
 
