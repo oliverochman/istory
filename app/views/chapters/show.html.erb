@@ -1,7 +1,5 @@
 <p> <%= @chapter.content %> </p>
-<% chapter_a = Chapter.find_by(chapter_id: @chapter.chapter_id + "A") %>
-<% chapter_b = Chapter.find_by(chapter_id: @chapter.chapter_id + "B") %>
-<% if chapter_a && chapter_b %>
-  <%= link_to @chapter.choice_a, story_chapter_path(@chapter.story, chapter_a) %>
-  <%= link_to @chapter.choice_b, story_chapter_path(@chapter.story, chapter_b) %>
+<% if @chapter_a && @chapter_b %>
+  <%= link_to @chapter.choice_a, story_chapter_path(@chapter.story, @chapter_a) %>
+  <%= link_to @chapter.choice_b, story_chapter_path(@chapter.story, @chapter_b) %>
 <% end %>
