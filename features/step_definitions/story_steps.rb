@@ -13,7 +13,7 @@ end
 
 Given("I visit the {string} story page") do |story_title|
   story = Story.find_by(title: story_title)
-  visit "/stories/#{story.id}"
+  visit story_path(story)
 end
 
 Then("I should be on the {string} chapter") do |choice|
