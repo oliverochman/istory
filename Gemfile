@@ -15,6 +15,7 @@ gem 'coffee-rails'
 gem 'turbolinks'
 gem 'jbuilder'
 gem 'devise'
+gem 'omniauth-facebook', '~> 4.0'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

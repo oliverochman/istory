@@ -10,7 +10,7 @@ Feature: Login
       | daniel@random.com           | password |
 
   Scenario: A user provides valid credentials and can log in
-    Given I am on the landing page
+    Given I visit the landing page
     When I click "Login" button
     Then I am on the login page
     And I enter "Email" as "jenny@ranom.com"

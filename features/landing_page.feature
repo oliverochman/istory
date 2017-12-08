@@ -4,7 +4,7 @@ Feature: iStory landing page
   I would like to see, create an account, login and some story examples on the landing page
 
   Scenario: Display content on landing page
-    Given I am on the landing page
+    Given I visit the landing page
     Then I should see "iStory"
     And I should see "An interactive journey"
     And I should see "Login" button
