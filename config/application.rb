@@ -12,8 +12,6 @@ require "sprockets/railtie"
 
 Bundler.require(*Rails.groups)
 
-Dotenv::Railtie.load
-
 HOSTNAME = ENV['HOSTNAME']
 
 module Istory
