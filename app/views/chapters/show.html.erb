@@ -1,0 +1,10 @@
+<p> <%= @chapter.content %> </p>
+
+
+<% @chapter.child_chapters.each do |child_chapter| %>
+  <%= link_to child_chapter.title, story_chapter_path(@chapter.story, child_chapter) %>
+<% end %>
+
+<% if @chapter.child_chapters == [] %>
+  <%= link_to "Home Page", root_path %>
+<% end %>
